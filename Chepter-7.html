@@ -1,0 +1,80 @@
+<!-- 
+1. Add a phone number field to the form that accepts only numbers.
+2.⁠ ⁠Include a textarea for additional comments.
+3.⁠ ⁠Add validation to ensure the password is at least 8 characters long using the pattern attribute.
+4.⁠ ⁠Style the form to center it on the page and add a background color. Styling part is optional but I recommended
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chepter-7</title>
+    <style>
+        body{
+            background-color: rgb(50, 50, 50);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .form{
+            background-color: rgb(178, 178, 178);
+            padding: 30px;
+            border-radius: 15px;
+        }
+        label{
+            font-size:medium;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .heading{
+            text-align: center;
+            font-size: larger;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding-bottom: 20px;
+        }
+        .submit{
+            margin-top: 10px;
+            padding: 7px;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+  </head>
+  <body>
+    <table class="form">
+      <from>
+        <tr><td colspan="2" class="heading">From</td></tr>
+        <!-- phone number field -->
+        <tr>
+          <td><label>Phone number :</label></td>
+          <td><input type="number" placeholder="Phone number" /></td>
+        </tr>
+        <!-- textarea for additional comment  -->
+        <tr>
+          <td><label for="info">Additional information</label></td>
+          <td><textarea name="info" placeholder="Additional info"></textarea></td>
+        </tr>
+        <tr>
+          <!-- password at list 8 charecter -->
+          <td><label>Password:</label></td>
+          <td>
+            <input
+              type="password"
+              placeholder="password"
+              pattern=".{8,}"
+              title="8 characters password"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <input class="submit" type="submit" value="Submit" />
+          </td>
+        </tr>
+      </from>
+    </table>
+  </body>
+</html>

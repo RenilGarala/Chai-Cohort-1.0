@@ -4,9 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chepter-12</title>
+    <title>Online Juice Ordering App</title>
 </head>
-<body style="background-color: rgb(38, 38, 38); color: rgb(218, 218, 218);">
-    
+<body>
+    <header>
+        <h1>Fresh Juice Online</h1>
+        <p>Order fresh and healthy juices online!</p>
+    </header>
+
+    <section>
+        <h2>Menu</h2>
+        <ul>
+            <li>Orange Juice - $5 <button>Add to Cart</button></li>
+            <li>Apple Juice - $6 <button>Add to Cart</button></li>
+            <li>Mango Juice - $7 <button>Add to Cart</button></li>
+            <li>Watermelon Juice - $5 <button>Add to Cart</button></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Order Now</h2>
+        <form>
+            <label for="juice">Select Juice:</label>
+            <select id="juice" name="juice">
+                <option>Orange Juice</option>
+                <option>Apple Juice</option>
+                <option>Mango Juice</option>
+                <option>Watermelon Juice</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment">
+                <option>Cash on Delivery</option>
+                <option>Online Payment</option>
+            </select>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fresh Juice Online. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

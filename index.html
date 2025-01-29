@@ -6,32 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All HTML Assignments</title>
     <style>
-        /* Black theme styles */
         body {
-            background-color: #121212;
-            color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #171717;
         }
 
         .container {
-            text-align: center;
-            width: 30%;
+            width: 40%;
             max-width: 500px;
-            background: #1e1e1e;
+            margin: 30px auto;
+            background: rgb(51, 51, 51);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
         .heading {
+            text-align: center;
             font-size: 24px;
+            font-weight: bold;
             margin-bottom: 20px;
+            color: #f2f2f2;
         }
 
         .assignment-list {
@@ -41,17 +38,43 @@
         }
 
         .assignment {
-            display: block;
-            background: #333;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 10px;
+            display: flex;
+            color: #f2f2f2;
+            justify-content: space-between;
+            align-items: center;
+            background: #424242;
+            padding: 10px 15px;
             border-radius: 5px;
-            transition: 0.3s ease-in-out;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .assignment:hover {
-            background: #444;
+        .assignment p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #006eff;
+        }
+
+        .source {
+            
+        }
+
+        .links a:hover {
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -60,18 +83,90 @@
     <section class="container">
         <h1 class="heading">All HTML Assignments</h1>
         <div class="assignment-list">
-            <a href="./Chepter-1.html" class="assignment">Assignment 1</a>
-            <a href="./Chepter-2.html" class="assignment">Assignment 2</a>
-            <a href="./Chepter-3.html" class="assignment">Assignment 3</a>
-            <a href="./Chepter-4.html" class="assignment">Assignment 4</a>
-            <a href="./Chepter-5.html" class="assignment">Assignment 5</a>
-            <a href="./Chepter-6.html" class="assignment">Assignment 6</a>
-            <a href="./Chepter-7.html" class="assignment">Assignment 7</a>
-            <a href="./Chepter-8.html" class="assignment">Assignment 8</a>
-            <a href="./Chepter-9.html" class="assignment">Assignment 9</a>
-            <a href="./Chepter-10.html" class="assignment">Assignment 10</a>
-            <a href="./Chepter-11.html" class="assignment">Assignment 11</a>
-            <a href="./Chepter-12.html" class="assignment">Assignment 12</a>
+            <div class="assignment">
+                <p>Assignment 1</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-1.html">Source Code</a>
+                    <a href="./Chepter-1.html">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 2</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-2.html">Source Code</a>
+                    <a href="./Chepter-2.html" class="Preview">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 3</p>
+                <div class="links">     
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-3.html">Source Code</a>
+                    <a href="./Chepter-3.html" class="Preview">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 4</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-4.html">Source Code</a>
+                    <a href="./Chepter-4.html" class="Preview">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 5</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-5.html">Source Code</a>
+                    <a href="./Chepter-5.html" class="Preview">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 6</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-6.html">Source Code</a>
+                    <a href="./Chepter-6.html" class="Preview">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 7</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-7.html">Source Code</a>
+                    <a href="./Chepter-7.html" class="Preview">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 8</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-8.html">Source Code</a>
+                    <a href="./Chepter-8.html" class="Preview">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 9</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-9.html">Source Code</a>
+                    <a href="./Chepter-9.html" class="Preview">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 10</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-10.html">Source Code</a>
+                    <a href="./Chepter-10.html" class="Preview">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 11</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-11.html">Source Code</a>
+                    <a href="./Chepter-11.html" class="Preview">Preview</a>
+                </div>
+            </div>
+            <div class="assignment">
+                <p>Assignment 12</p>
+                <div class="links">
+                    <a href="https://github.com/RenilGarala/Cohort-HTML/blob/main/Chepter-12.html">Source Code</a>
+                    <a href="./Chepter-12.html" class="Preview">Preview</a>
+                </div>
+            </div>
         </div>
     </section>
 </body>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./icons/chai.png" type="image/x-icon">
+    <title>chaicode</title>
+    <style>
+        body {
+            background-color: rgb(24, 24, 41);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* navbar start */
+        nav {
+            margin-left: 150px;
+            margin-right: 150px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 16px;
+            padding-right: 16px;
+            border: 0.5px solid rgb(94, 94, 94);
+            border-radius: 7px;
+        }
+
+        .search-box:hover {
+            background-color: rgb(41, 41, 58);
+        }
+
+        .search-input {
+            background-color: transparent;
+            border: none;
+            font-size: large;
+            outline: none;
+            color: gainsboro;
+        }
+
+        .chai-logo {
+            width: 90px;
+        }
+
+        .right-nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-items {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-item {
+            color: rgb(236, 236, 236);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            font-size: medium;
+        }
+
+        .signin {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border: 1.5px solid rgb(255, 111, 0);
+            border-radius: 4px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 14px;
+            padding-right: 14px;
+            font-size: small;
+            color: rgb(255, 111, 0);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .signin:hover {
+            background-color: rgb(42, 42, 74);
+        }
+
+        .signup {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border: 1.5px solid rgb(255, 111, 0);
+            background-color: rgb(255, 111, 0);
+            margin-left: 8px;
+            border-radius: 4px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 14px;
+            padding-right: 14px;
+            font-size: small;
+            color: rgb(24, 24, 41);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .signup:hover {
+            background-color: rgb(255, 130, 34);
+        }
+
+        /* navbar end */
+
+        /* header start */
+        .header {
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            font-size: 5cqh;
+            font-weight: 600;
+            font-family: sans-serif;
+            color: rgb(236, 236, 236);
+            background-image: linear-gradient(to right, rgb(115, 50, 0), rgb(255, 154, 77));
+        }
+
+        /* header end  */
+        .body-section {
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
+        .body-heading {
+            padding-top: 40px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            color: rgb(236, 236, 236);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: x-large;
+        }
+
+        .all-course {
+            color: rgb(236, 236, 236);
+            text-decoration: none;
+            font-size: medium;
+            padding-right: 10px;
+        }
+
+        .left-heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .buttons {
+            background-color: rgb(47, 47, 66);
+            border: none;
+            padding: 10px;
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .courses {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .course {
+            background-color: rgb(47, 47, 66);
+            padding: 13px;
+            border-radius: 7px;
+            height: auto;
+        }
+
+        .course:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-link {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .course-image {
+            width: 240px;
+            border-radius: 5px;
+        }
+
+        .course-title {
+            line-height: 1.6;
+            margin-top: 10px;
+            width: 240px;
+            height: 60px;
+            text-decoration: none;
+            /* font-size: 0.4cm; */
+            font-size: 2.1cqmin;
+            font-weight: 600;
+            font-family: sans-serif;
+            color: rgb(236, 236, 236);
+        }
+
+        .course-lesson {
+            color: rgb(236, 236, 236);
+            font-family: sans-serif;
+            font-size: 0.4cm;
+        }
+
+        .course-price {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            color: rgb(236, 236, 236);
+            font-family: sans-serif;
+            font-size: 0.5cm;
+            font-weight: 700;
+        }
+
+        .batch:hover {
+            background-color: rgb(47, 47, 66);
+        }
+
+        .batch-link {
+            display: flex;
+            align-items: center;
+            padding: 13px;
+            gap: 20px;
+        }
+
+        .batch-details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            color: rgb(236, 236, 236);
+            text-decoration: none;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .batch-top {
+            display: flex;
+            justify-content: space-between;
+            font-size: 2.1cqmin;
+            font-weight: 600;
+        }
+
+        .batch-bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 2.1cqmin;
+        }
+
+        /* footer start  */
+        .footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 150px;
+            padding-right: 150px;
+        }
+
+        .language {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border: 1.5px solid rgb(216, 216, 216);
+            border-radius: 4px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 14px;
+            padding-right: 14px;
+            font-size: medium;
+            color: rgb(216, 216, 216);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-about {
+            color: rgb(216, 216, 216);
+            text-decoration: none;
+            font-size: large;
+            font-family: sans-serif;
+        }
+
+        .contact-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            color: rgb(216, 216, 216);
+            font-family: sans-serif;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-bottom a {
+            text-decoration: none;
+            color: rgb(216, 216, 216);
+            font-family: sans-serif;
+        }
+
+        .footer-bottom a:hover {
+            border-bottom: 0.2px solid rgb(216, 216, 216);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home-layout">
+        <nav>
+            <div class="left-nav">
+                <img class="chai-logo"
+                    src="https://imgproxy.learnyst.com/https://learnyst-user-assets.s3.ap-south-1.amazonaws.com/school-assets/schools/171024/schoolLogo/1717484431216banner_lyst1717484431227.png?w=100&h=48&resizetype=fit"
+                    alt="" />
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="search" />
+                    <img width="20" height="20" src="./icons/search.png" alt="search--v1" />
+                </div>
+            </div>
+            <div class="right-nav">
+                <div class="nav-items">
+                    <a href="" class="nav-item">Get App</a>
+                    <a href="https://courses.chaicode.com/learn/communities" class="nav-item">Communities</a>
+                    <a href="https://courses.chaicode.com/learn/segment" class="nav-item">English/Hindi</a>
+                    <a href="https://courses.chaicode.com/learn/newsfeed" class="nav-item">Newsfeed</a>
+                </div>
+                <div class="nav-button">
+                    <a class="signin" href="https://courses.chaicode.com/learn/account/signin">SIGN IN</a>
+                    <a class="signup" href="https://courses.chaicode.com/learn/account/signup">SIGN UP</a>
+                </div>
+            </div>
+        </nav>
+        <!-- header start  -->
+        <header class="header">
+            <div>Welcome to chaicode</div>
+        </header>
+        <!-- header end  -->
+
+        <!-- body start -->
+        <main class="body-section">
+            <div>
+                <div class="body-heading">
+                    <div>Courses</div>
+                    <div class="left-heading">
+                        <a href="https://courses.chaicode.com/learn/view-all?show=courses&type=1"
+                            class="all-course">View All</a>
+                        <button class="buttons"><img width="10" height="10" src="./icons/left.png"
+                                alt="search--v1" /></button>
+                        <button class="buttons"><img width="10" height="10" src="./icons/right.png"
+                                alt="search--v1" /></button>
+                    </div>
+                </div>
+                <div class="courses">
+
+                    <div class="course">
+                        <a class="course-link" href="https://courses.chaicode.com/learn/Buy-me-a-tea">
+                            <div class="top">
+                                <img class="course-image" src="./icons/course1.png" alt="">
+                                <p class="course-title">Buy me a tea</p>
+                            </div>
+                            <div class="bottom">
+                                <div class="course-lesson">1 Lesson</div>
+                                <div class="course-price">₹ 199</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course">
+                        <a class="course-link" href="https://courses.chaicode.com/learn/Buy-me-a-tea">
+                            <div class="top">
+                                <img class="course-image" src="./icons/course2.png" alt="">
+                                <p class="course-title">Chai aur Django in Hindi</p>
+                            </div>
+                            <div class="bottom">
+                                <div class="course-lesson">9 Lesson</div>
+                                <div class="course-price">FREE</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course">
+                        <a class="course-link" href="https://courses.chaicode.com/learn/Buy-me-a-tea">
+                            <div class="top">
+                                <img class="course-image" src="./icons/course3.png" alt="">
+                                <p class="course-title">Complete Backend development with Jvascript</p>
+                            </div>
+                            <div class="bottom">
+                                <div class="course-lesson">3 Lesson</div>
+                                <div class="course-price">FREE</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course">
+                        <a class="course-link" href="https://courses.chaicode.com/learn/Buy-me-a-tea">
+                            <div class="top">
+                                <img class="course-image" src="./icons/course4.png" alt="">
+                                <p class="course-title">Full stack development with Hono and Mongodb</p>
+                            </div>
+                            <div class="bottom">
+                                <div class="course-lesson">1 Lesson</div>
+                                <div class="course-price">FREE</div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </main>
+        <!-- body end  -->
+
+        <!-- Test start -->
+        <main class="body-section">
+            <div>
+                <div class="body-heading">
+                    <div>Tests</div>
+                    <div class="left-heading">
+                        <a href="https://courses.chaicode.com/learn/view-all?show=mock-tests&type=2"
+                            class="all-course">View All</a>
+                        <button class="buttons"><img width="10" height="10" src="./icons/left.png"
+                                alt="search--v1" /></button>
+                        <button class="buttons"><img width="10" height="10" src="./icons/right.png"
+                                alt="search--v1" /></button>
+                    </div>
+                </div>
+                <div class="courses">
+                    <div class="course">
+                        <a class="course-link" href="https://courses.chaicode.com/learn/Daily-Quiz-30th-November-2024">
+                            <div class="top">
+                                <img class="course-image" src="./icons/quiz1.png" alt="">
+                                <p class="course-title">Daily Quiz 30th November 2024</p>
+                            </div>
+                            <div class="bottom">
+                                <div class="course-lesson">Expired</div>
+                                <div class="course-price">FREE</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course">
+                        <a class="course-link" href="https://courses.chaicode.com/learn/Daily-Quiz-29th-November-2024">
+                            <div class="top">
+                                <img class="course-image" src="./icons/quiz2.png" alt="">
+                                <p class="course-title">Daily Quiz 29th November 2024</p>
+                            </div>
+                            <div class="bottom">
+                                <div class="course-lesson">Expired</div>
+                                <div class="course-price">FREE</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course">
+                        <a class="course-link" href="https://courses.chaicode.com/learn/Daily-Quiz-28th-November-2024">
+                            <div class="top">
+                                <img class="course-image" src="./icons/quiz3.png" alt="">
+                                <p class="course-title">Daily Quiz 28th November 2024</p>
+                            </div>
+                            <div class="bottom">
+                                <div class="course-lesson">Expired</div>
+                                <div class="course-price">FREE</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="course">
+                        <a class="course-link" href="https://courses.chaicode.com/learn/Daily-Quiz-27th-November-2024">
+                            <div class="top">
+                                <img class="course-image" src="./icons/quiz4.png" alt="">
+                                <p class="course-title">Daily Quiz 27th November 2024</p>
+                            </div>
+                            <div class="bottom">
+                                <div class="course-lesson">Expired</div>
+                                <div class="course-price">FREE</div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </main>
+        <!-- Test end  -->
+
+        <!-- batch start -->
+        <main class="body-section" style="border-bottom: 0.3px solid gray ;">
+            <div>
+                <div class="body-heading">
+                    <div>Batches</div>
+                </div>
+                <div class="batch">
+                    <a class="batch-link" href="https://courses.chaicode.com/learn/batch/14-Days-Cpp-challenge-batch">
+                        <div>
+                            <img width="250px" src="./icons/batch1.jpg" alt="">
+                        </div>
+                        <div class="batch-details">
+                            <div class="batch-top">
+                                <div>14 Days c++ challenge batch</div>
+                                <div>₹ 500</div>
+                            </div>
+                            <div class="batch-bottom">
+                                <div>1 Course </div>
+                                <div>if you have coupon. get it for free. WE are interested in minimum student this
+                                    time. wait for next challenge if coupons are over.</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="batch" style="margin-top: 10px;">
+                    <a class="batch-link" href="https://courses.chaicode.com/learn/batch/Web-Dev-Cohort">
+                        <div>
+                            <img width="250px" src="./icons/batch2.jpg" alt="">
+                        </div>
+                        <div class="batch-details">
+                            <div class="batch-top">
+                                <div>Web Dev Cohort</div>
+                                <div>₹ 6999</div>
+                            </div>
+                            <div class="batch-bottom">
+                                <div>23 Course </div>
+                                <div>Master full stack web development With web Dev cohort - Live 1.0 Learn HTML, CSS,
+                                    JS, React, Next.js, Node, Docker, databases like MongoDB/PostgreSQL... </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <!-- batch end  -->
+        <footer>
+            <div class="footer">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <img src="https://imgproxy.learnyst.com/https://learnyst-user-assets.s3.ap-south-1.amazonaws.com/school-assets/schools/171024/schoolLogo/1717484431216banner_lyst1717484431227.png?w=100&h=48&resizetype=fit"
+                            alt="">
+                        <a class="language"
+                            href="https://courses.chaicode.com/learn/account/language-list?from=/learn">Language</a>
+                        <a class="footer-about" href="https://courses.chaicode.com/learn/aboutus">About Us</a>
+                    </div>
+                    <div class="contact-link">
+                        <a href="https://x.com/hiteshdotcom?mx=2"><img width="23px" src="./icons/twitter.png" alt=""></a>
+                        <a href="https://www.youtube.com/@chaiaurcode"><img width="29px" src="./icons/youtube.png" alt=""></a>
+                        <a href="https://www.instagram.com/hiteshchoudharyofficial/"><img width="28px" src="./icons/instagram.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <a href="https://courses.chaicode.com/learn/pages/terms-of-service.html">Terms & Conditions</a>
+                    <a href="https://courses.chaicode.com/learn/pages/privacy-policy.html">Privacy Policy</a>
+                    <a href="https://courses.chaicode.com/learn/pages/refund.html">Refund Policy</a>
+                    <a href="https://courses.chaicode.com/learn/pages/pricing-policy.html">pricing policy</a>
+                    <a href="https://courses.chaicode.com/learn/pages/contact-us.html">contact us</a>
+                    <p>Copyright &copy; 2025 chaicode</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

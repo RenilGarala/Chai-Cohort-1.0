@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="rounded max-w-md mx-auto mt-10 p-4 border">
+        <h1 class="text-lg font-bold text-center">To Do Application</h1>
+        <div class="header flex gap-2 mt-4">
+            <input id="task-input" class="border p-1 flex-1" placeholder="Enter Your Task"/>
+            <button onclick="addTask()" id="add-btn" class="rounded bg-blue-500 text-white px-2 py-1">
+                Add Task
+            </button>
+        </div>
+    
+        <button onclick="deleteAllTask()" class=" rounded bg-red-500 text-white w-full py-1 mt-2">
+            Delete All Tasks
+        </button>
+    
+        <div class="task-list-container mt-2">
+            <ul id="task-list"></ul>
+        </div>
+    </div>
+</body>
+<script>
+    function addTask(){
+        const input = document.getElementById("task-input");
+        const inputText = input.value;
+
+        const li = document.createElement("li")
+        li.innerText = inputText;
+
+        //create delete button
+        const btn = document.createElement("button");
+        btn.innerText="Delete";
+        //style delete btn
+        btn.style.background="red"
+        btn.style.color="white"
+        btn.style.padding="7px"
+        btn.style.margin="5px"
+
+        //crate update button
+        const updateBtn = document.createElement("button");
+        updateBtn.innerText="Update";
+        //crate update button
+        updateBtn.style.background="#17B169"
+        updateBtn.style.color="white"
+        updateBtn.style.padding="7px"
+        updateBtn.style.margin="5px"
+
+        updateBtn.addEventListener('click', function(){
+            input.value =  li.childNodes[0].nodeValue;
+            const addBtn = document.getElementById("add-btn");
+            addBtn.innerText= "Update";
+
+            addBtn.onclick = function(){
+                li.childNodes[0].nodeValue = input.value;
+                addBtn.innerText = "Add"
+                input.value='';
+                //original function assign kerna hoga taki new task add ker sake
+                addBtn.onclick = addTask;
+            }
+        });
+
+        btn.addEventListener('click', function(){
+            li.remove();
+        });
+
+        li.appendChild(btn);
+        li.appendChild(updateBtn);
+
+        const taskList = document.getElementById("task-list");
+        taskList.appendChild(li);
+        
+        input.value='';
+    }
+    function deleteAllTask(){
+        const ul = document.getElementById("task-list");
+        ul.innerHTML = "";
+    }
+</script>
+</html>

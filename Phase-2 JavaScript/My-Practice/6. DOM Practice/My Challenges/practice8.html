@@ -1,0 +1,32 @@
+<!-- Write a script that dynamically creates and appends a table with 3 rows and 3 columns inside a <div>. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice question 8</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+<script>
+    const container = document.getElementById("container");
+    const table = document.createElement("table");
+    for(let i=0; i<3;i++){
+        const row = document.createElement("tr");
+        for(let j=0;j<3;j++){
+            const columns = document.createElement("td");
+            columns.innerText = i+","+j;
+            columns.style.border="1px solid black";
+            columns.style.textAlign="center";
+            columns.style.padding="10px";
+            row.appendChild(columns);
+        }
+        table.appendChild(row);
+    }
+
+    container.appendChild(table);
+</script>
+</html>

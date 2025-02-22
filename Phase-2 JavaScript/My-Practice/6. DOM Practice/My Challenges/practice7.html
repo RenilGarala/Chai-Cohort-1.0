@@ -1,0 +1,26 @@
+<!-- Create a function that toggles the visibility of a <div> element when a button is clicked. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="toggle()" id="btn">toggle</button>
+    <p id="element">Hello Dosto!</p>
+</body>
+<script>
+    function toggle(){
+        const btn = document.getElementById("btn");
+        const element = document.getElementById("element");
+        if(element.style.display==="none"){
+            element.style.display = "block";
+        }else{
+            element.style.display = "none";
+        }
+    }
+    
+
+</script>
+</html>

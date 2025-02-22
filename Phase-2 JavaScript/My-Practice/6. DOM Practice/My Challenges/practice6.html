@@ -1,0 +1,22 @@
+<!-- Implement an event listener that changes the text color of a paragraph when the mouse hovers over it. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice question 6</title>
+ </head>
+ <body>
+    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias recusandae est adipisci voluptates facere sed aspernatur unde, commodi beatae, doloremque cupiditate dicta, similique voluptate!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque alias recusandae est adipisci voluptates facere sed aspernatur unde, commodi beatae, doloremque cupiditate dicta, similique voluptate!</p>
+ </body>
+ <script>
+    const paragraph = document.getElementById("paragraph");
+    paragraph.addEventListener("mouseover", function(){
+        paragraph.style.color="red";
+    });
+    paragraph.addEventListener("mouseout",()=>{
+        paragraph.style.color="black";
+    })
+ </script>
+ </html>

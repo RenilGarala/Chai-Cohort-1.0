@@ -1,0 +1,26 @@
+<!-- Implement a counter that increases or decreases a number displayed inside a <span> when two different buttons (increase/decrease) are clicked. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="decreases" onclick="decreasesNumber()">-</button>
+    <span id="value">0</span>
+    <button id="increases" onclick="increasesNumber()">+</button>
+</body>
+<script>
+    const decreases = document.getElementById("decreases");
+    const increases = document.getElementById("increases");
+    let valueID = document.getElementById("value");
+
+    function increasesNumber(){
+        valueID.innerText = `${Number(valueID.innerText)+1}`;
+    }
+    function decreasesNumber(){
+        valueID.innerText = `${valueID.innerText-1}`;
+    }
+</script>
+</html>

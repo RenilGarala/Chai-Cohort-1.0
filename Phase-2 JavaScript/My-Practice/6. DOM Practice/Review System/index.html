@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review App</title>
+    <script src="index.js"></script>
+    <style>
+        body{
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            margin: 40px;
+            width: 100%;
+            height: fit-content;
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #review-list {
+            margin-top: 20px;
+            text-align: left;
+            width: full;
+        }
+
+        p {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+        }
+
+        .review-box {
+            background: #F5F5F5;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #theme-btn {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: none;
+            padding: 14px 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            color:#1d1d1d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="theme">
+        <button id="theme-btn" onclick="themeChange()">Light Gray</button>
+        
+    </div>
+    <div class="body">
+        <div id="container" class="container">
+            <h2 id="heading">Product Review</h2>
+            <div class="box">
+                <input type="text" placeholder="Enter Your Name" id="name" />
+                <input type="address" placeholder="Your Review" id="review-text" />
+                <button onclick="addreview()">Submit</button>
+            </div>
+            <div id="review-list">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

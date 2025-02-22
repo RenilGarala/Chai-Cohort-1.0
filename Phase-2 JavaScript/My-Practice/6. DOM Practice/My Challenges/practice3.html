@@ -1,0 +1,39 @@
+<!-- Write a function that removes the last item from an unordered list (<ul>) when a button is clicked. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice question 3</title>
+</head>
+<body>
+    <input id="item" type="text" placeholder="Enter item" />
+    <button onclick="addItem()">Add</button>
+    <button onclick="deleteLast()">Delete last item</button>
+    <ul id="list-items">
+    </ul>
+</body>
+<script>
+    function addItem() {
+        const item = document.getElementById("item");
+        const itemText = item.value;
+
+        const listItem = document.getElementById("list-items");
+
+        const li = document.createElement("li");
+
+        li.innerText = itemText;
+        listItem.appendChild(li);
+
+        item.value = "";
+    }
+
+    function deleteLast(){
+        const listItem = document.getElementById("list-items");
+        const lastLi = listItem.lastChild;
+        lastLi.remove();
+    }
+
+</script>
+
+</html>

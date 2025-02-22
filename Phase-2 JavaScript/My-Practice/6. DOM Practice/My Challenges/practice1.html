@@ -1,0 +1,28 @@
+<!-- 1.Write a JavaScript function that changes the background color of a <div> element when a button is clicked. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Question - 1</title>
+</head>
+
+<body>
+    <div id="container">
+        <button onclick="themeChange()" id="theme-btn">Click me</button>
+    </div>
+</body>
+<script>
+    const themeButton = document.getElementById("theme-btn");
+    function themeChange() {
+        const color = document.body.style.backgroundColor;
+        if(color == "white"){
+            document.body.style.background="black";
+        }else{
+            document.body.style.background="white";
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!-- Create a JavaScript function that updates the text inside a <p> element when the user types in an input field. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice question 4</title>
+</head>
+
+<body>
+    <input id="item" type="text" placeholder="Enter item" />
+    <button id="uBtn">update paragraph</button>
+    <p id="list-items">
+        For Update Text Click on "update paragraph" Button
+    </p>
+</body>
+<script>
+    const item = document.getElementById("item");
+    const listItem = document.getElementById("list-items");
+    const uBtn = document.getElementById("uBtn");
+
+    let toggle = true;
+
+    uBtn.addEventListener("click", function () {
+        if (toggle) {
+            item.value = listItem.innerText; 
+        } else {
+            listItem.innerText = item.value;
+        }
+        toggle = !toggle;
+    });
+</script>
+
+</html>

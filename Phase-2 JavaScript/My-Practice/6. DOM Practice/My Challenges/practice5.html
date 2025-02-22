@@ -1,0 +1,30 @@
+<!-- Write a function that prevents a form from submitting and instead displays an alert with the input values. -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+        <input id="name" type="text" placeholder="Enter name"/><br>
+        <input id="password" type="password" placeholder="Enter password"/><br>
+        <button onclick="submitForm()">submit</button>
+    <h2>submited-value</h2>
+    <div id="submited-value">
+    </div>
+ </body>
+ <script>
+    function submitForm(){
+        alert("Submit form");
+        const nameField = document.getElementById("name");
+        const passwordField = document.getElementById("password");
+
+        const submitedValue = document.getElementById("submited-value");
+        submitedValue.innerText = "User Name = "+ nameField.value + ", Password = "+passwordField.value;
+        
+        nameField.value='';
+        passwordField.value='';
+    }
+ </script>
+ </html>

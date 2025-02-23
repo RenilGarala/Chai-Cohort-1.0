@@ -23,8 +23,10 @@ addButton.addEventListener("click", function(){
 
     completeCheckBox.addEventListener("change", function(){ 
         if (completeCheckBox.checked){
+            li.style.textDecorationLine = "line-through"
             completedCount++;
         } else{
+            li.style.textDecorationLine = "none"
             completedCount--;
         }
         document.getElementById("completedTasks").innerText = `Completed: ${completedCount}`;

@@ -30,7 +30,6 @@ addButton.addEventListener("click", function(){
             completedCount--;
         }
         document.getElementById("completedTasks").innerText = `Completed: ${completedCount}`;
-
     });
 
     taskList.appendChild(li);

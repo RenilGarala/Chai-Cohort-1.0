@@ -12,7 +12,7 @@ if(!Array.prototype.myForEach){
     }
 }
 arr.myForEach((e, index)=>{
-    // console.log(e*3,index);
+    console.log(e*3,index);
 })
 
 // -----------------------map()----------------------------
@@ -30,7 +30,7 @@ if(!Array.prototype.myMap){
 let mapArray = arr.myMap((e,i)=>{
     return e*i;
 })
-// console.log(mapArray);
+console.log(mapArray);
 
 // -----------------------filter()----------------------------
 // -> return element if true
@@ -51,7 +51,7 @@ if(!Array.prototype.myFilter){
 let filterArray = arr.myFilter((e)=>{
     return e%2===0;
 })
-// console.log(filterArray)
+console.log(filterArray)
 
 // -----------------------reduce()----------------------------
 // -> return calculated result of array
@@ -69,7 +69,7 @@ if(!Array.prototype.myReduce){
 let reduceArray = arr.myReduce((temp, e)=>{
     return temp+e;
 },0)
-// console.log(reduceArray);
+console.log(reduceArray);
 
 // -----------------------find()----------------------------
 // -> return the first element if satisfies a condition
@@ -88,7 +88,7 @@ if(!Array.prototype.myFind){
 let findArray = arr.myFind((e)=>{
     return e<0;
 })
-// console.log(findArray);
+console.log(findArray);
 
 // -----------------------findIndex()----------------------------
 // -> return the first element index if satisfies a condition
@@ -107,7 +107,7 @@ let findAtArray = arr.myFindIndex((e)=>{
     return e<0;
 })
 
-// console.log(findAtArray);
+console.log(findAtArray);
 
 // -----------------------some()----------------------------
 // return true if at least one element satisfies a condition.
@@ -126,7 +126,7 @@ let someArray = arr.mySome((e)=>{
     return e>0;
 })
 
-// console.log(someArray);
+console.log(someArray);
 
 // -----------------------every()----------------------------
 // return true if all element satisfies a condition.
@@ -145,7 +145,7 @@ let everyArray = arr.myEvery((e)=>{
     return e>0;
 })
 
-// console.log(everyArray);
+console.log(everyArray);
 
 // -----------------------includes()----------------------------
 // Checks if an element exists in an array.
@@ -166,7 +166,7 @@ if(!Array.prototype.myIncludes){
 
 let includesArray = arr.myIncludes(5,3)
 
-// console.log(includesArray);
+console.log(includesArray);
 
 // -----------------------indexOf()----------------------------
 // returns the index of the first occurrence of an element.
@@ -187,7 +187,7 @@ if(!Array.prototype.myIndexOf){
 
 let indexOfArray = arr.myIndexOf(5,2)
 
-// console.log(indexOfArray);
+console.log(indexOfArray);
 
 //-----------------------lastIndexOf()----------------------------
 // return the last index of an occurrence of an element.
